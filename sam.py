@@ -15,3 +15,10 @@ def sam(jong):
 if __name__ == "__main__":
     print(args[1])
     print(sam(args[1]))
+
+
+
+
+
+
+        
