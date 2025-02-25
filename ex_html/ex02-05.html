@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>5. 그 외 내용들</h1>
+    <fieldset>
+        <legend>
+            input 속성들
+        </legend>
+        <p>검색: <input type="search"></p>
+        <p>이메일: <input type="email"></p>
+        <p>전화번호: <input type="tel"></p>
+        <p>컬러: <input type="color"></p>
+        <p>range1: <input type="range" min=0 max=100 step="10"></p>
+        <!--p는 위아래 여백-->
+    </fieldset>
+    <fieldset>
+        <legend>
+            폼양식테스트
+        </legend>
+        <form action="#">
+            <p>이메일 형식: <input type="email"></p>
+            <p>전화번호 형식: <input type="tel" pattern="010-[0-9]{3,4}-[0-9]{4}">('-' 포함하여 전화번호를 입력하세요)</p>
+            <input type="submit">
+        </form>
+    </fieldset>
+</body>
+</html>

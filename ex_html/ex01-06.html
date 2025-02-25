@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form 양식</title>
+</head>
+
+<body>
+    <h1>6. Form 양식</h1>
+
+    <fieldset>
+        <legend>이름양식</legend>
+
+        <form action="https://www.google.com/">
+
+            <label for="fname">First Name: </label>
+            <input id="fname" type="text" name="fname" placeholder="이름" required>
+            <br>
+
+            <label for="lname">Last Name: </label>
+            <input id="lname" type="text" name="lname" placeholder="성">
+            <br>
+
+            <label for="age">Age: </label>
+            <input id="age" type="number" name="age" min="12" max="20" step="2" value="15">
+            <br>
+
+            재밌음: <input type="checkbox" name="chk1">
+            신남: <input type="checkbox" checked name="chk2">
+            <br>
+
+            남성: <input type="radio" name="gender" value="male">
+            여성: <input type="radio" name="gender" value="female" checked>
+            <br>
+
+            멋짐: <input type="radio" name="who" value="cool" checked>
+            예쁨: <input type="radio" name="who" value="cute">
+            <br>
+
+            Password: <input type="password">
+            <br>
+            
+            date: <input type="date">
+            <br>
+            time: <input type="time">
+            <br>
+            birth: <input type="datetime-local">
+            <br>
+            file: <input type="file">
+            <br>
+            (숨김):<input type="hidden" name="신난다" value="오늘은지르는날">
+            <br>
+
+            <hr>
+            <input type="submit" value="보내기">
+            <input type="reset" value="내용지우기">
+            <hr>
+            
+            <button type="submit">제출버튼</button>
+            <button type="reset">삭제버튼</button>
+            <!--버튼도 input처럼 기능할 수 있음-->
+
+        </form>
+        <!--form, input은 한 쌍-->
+    </fieldset>
+
+
+
+
+
+
+</body></html>

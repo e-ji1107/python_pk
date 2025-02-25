@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 (표)</title>
+    <style>
+        table {
+            border-collapse: collapse /*경계선 없애기*/
+        }
+
+        tr {
+            text-align: center
+        }
+
+        th {
+            background-color: darkolivegreen;
+            color: white
+        }
+
+        td,
+        th {
+            padding: 5px;
+            width: 20%
+        }
+    </style>
+    <script></script>
+</head>
+
+<body>
+
+    <table border="1" align="center" width="500">
+        <tr>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+        <tr align="center">
+            <td rowspan="2">국밥</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="background-color: yellow">라면</td>
+            <td>파스타</td>
+        </tr>
+        <tr>
+            <td>9000</td>
+            <td>5000</td>
+            <td>8000</td>
+            <td>8500</td>
+            <td>11000</td>
+        </tr>
+
+
+    </table>
+
+</body></html>

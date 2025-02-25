@@ -1,0 +1,35 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인패턴</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>패턴테스트</legend>
+        <form action="">
+            ID: <input type="text" pattern="[a-zA-Z]"><br>
+            PW: <input type="password" pattern="[0-9]{4}" required>
+            <!--{4} 4글자는 적어야한다는 뜻, {5, 는 5글자 이상-->
+            <input type="submit">
+        </form>
+    </fieldset>
+</body></html>
+```
+
+pattern 개념
+
+- form 제출 시 input 요소의 값을 검사할 때 사용될 정규 표현식을 명시
+- 정규표현식
+    
+    문자열에서 특정한 규칙을 가지는 문자열의 집합을 찾아내기 위한 검색 패턴
+    
+
+ex) 조건을 적어 검색을 해줌
+
+<input type=”text” name = “number” pattern=”\d*” title=”숫자만”>
+
+<input type=”text” name = “number” pattern=”^[0-9]+$” title=”숫자만”>
