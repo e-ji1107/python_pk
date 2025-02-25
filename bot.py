@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram .ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
-TOKEN = "8019166662:AAG5UKmB6oMAcKKINiUmRoRKfNR3YQtJtVU"
+TOKEN = ""
 import talk_yej as tk
 
 tk.TRIGGER_WORDS
