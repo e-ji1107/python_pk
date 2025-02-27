@@ -24,7 +24,7 @@ async def monitor_chat(update, context):
 
     if "gpt" in user_text:
         res = gemini.aiai(user_text.replace("gpt",""))
-        await context.bot.send_message(chat_id = chat_id, text=res, parse_mode="MarkdownV2")
+        await context.bot.send_message(chat_id = chat_id, text=res) # parse_mode="MarkdownV2"
     elif "영화정보" in user_text: pass
         #await 영화정보크롤링() 함수 실행
     elif "사진줘" in user_text:
