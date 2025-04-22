@@ -1,0 +1,39 @@
+{
+  "paragraphs": [
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-21 01:26:46.593",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1745198803253_596259757",
+      "id": "paragraph_1745198803253_596259757",
+      "dateCreated": "2025-04-21 01:26:43.255",
+      "status": "READY"
+    }
+  ],
+  "name": "zep02",
+  "id": "2KUBAHWQZ",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.12.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

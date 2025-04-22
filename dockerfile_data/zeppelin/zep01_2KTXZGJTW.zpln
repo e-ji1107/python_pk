@@ -1,0 +1,157 @@
+{
+  "paragraphs": [
+    {
+      "text": "%sh\r\nhostname -I",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-21 01:31:42.568",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionSupport": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "172.20.0.2 172.19.0.2 \n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1745198832864_1761683652",
+      "id": "paragraph_1745198832864_1761683652",
+      "dateCreated": "2025-04-21 01:27:12.864",
+      "dateStarted": "2025-04-21 01:31:42.580",
+      "dateFinished": "2025-04-21 01:31:42.595",
+      "status": "FINISHED"
+    },
+    {
+      "text": "from kafka import KafkaProducer\nimport json\nimport time\nimport random\nfrom kafka.errors import KafkaError\n\ntry:\n    # Kafka 접속, 전송 코드\nexcept KafkaError as e:\n    print(f\"카프카 에러 발생: {e}\")\n\n# Kafka 프로듀서 설정\nproducer \u003d KafkaProducer(\n    bootstrap_servers\u003d\u0027kafka:9092\u0027,\n    value_serializer\u003dlambda v: json.dumps(v).encode(\u0027utf-8\u0027)\n)\n\nnum \u003d 0\nhow \u003d 1000\ndelay \u003d 1\n\n# 테스트용 스마트카 데이터 생성 함수\ndef generate_smartcar_data(num, how):\n    return {\n        \"car_id\": f\"{num}/{how}\",  # 임의의 자동차 아이디\n        \"speed\": round(random.uniform(80, 100), 2),  # 차량의 임의 속도 (km/h)\n        \"latitude\": round(random.uniform(34, 36), 2),\n        \"longitude\": round(random.uniform(124, 126), 2),\n        \"timestamp\": time.time()\n    }\n\nif __name__ \u003d\u003d \"__main__\":\n    try:\n        for r in range(how):\n            data \u003d generate_smartcar_data(r + 1, how)\n            producer.send(\"smart-car\", value\u003ddata)  # topic에 데이터 전송\n            print(f\u0027Send: {data}\u0027)  # 우리가 보내는 데이터 출력\n            time.sleep(delay)\n    except Exception as e:\n        print(f\"에러 발생: {e}\")\n    finally:\n        producer.close()\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-21 01:53:28.106",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionSupport": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[0;36m  Cell \u001b[0;32mIn[29], line 9\u001b[0;36m\u001b[0m\n\u001b[0;31m    except KafkaError as e:\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m expected an indented block\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1745198841657_1307156396",
+      "id": "paragraph_1745198841657_1307156396",
+      "dateCreated": "2025-04-21 01:27:21.657",
+      "dateStarted": "2025-04-21 01:53:28.117",
+      "dateFinished": "2025-04-21 01:53:28.174",
+      "status": "ERROR"
+    },
+    {
+      "text": "\r\npip install kafka-python\u003d\u003d1.4.7\r\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-21 01:47:30.681",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "editorHide": false,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Collecting kafka-python\u003d\u003d1.4.7\r\n  Downloading kafka_python-1.4.7-py2.py3-none-any.whl.metadata (7.6 kB)\r\nDownloading kafka_python-1.4.7-py2.py3-none-any.whl (266 kB)\r\nInstalling collected packages: kafka-python\r\n  Attempting uninstall: kafka-python\r\n    Found existing installation: kafka-python 2.1.5\r\n    Uninstalling kafka-python-2.1.5:\r\n      Successfully uninstalled kafka-python-2.1.5\r\nSuccessfully installed kafka-python-1.4.7\r\n\u001b[33mWARNING: Running pip as the \u0027root\u0027 user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\u001b[0m\u001b[33m\r\n\u001b[0mNote: you may need to restart the kernel to use updated packages.\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1745198950724_246807076",
+      "id": "paragraph_1745198950724_246807076",
+      "dateCreated": "2025-04-21 01:29:10.724",
+      "dateStarted": "2025-04-21 01:47:30.693",
+      "dateFinished": "2025-04-21 01:47:31.907",
+      "status": "FINISHED"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-21 01:29:26.676",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1745198956642_1583713132",
+      "id": "paragraph_1745198956642_1583713132",
+      "dateCreated": "2025-04-21 01:29:16.642",
+      "status": "READY"
+    }
+  ],
+  "name": "zep01",
+  "id": "2KTXZGJTW",
+  "defaultInterpreterGroup": "python",
+  "version": "0.12.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
