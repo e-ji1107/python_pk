@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header::myHeader}">
+    <title>타임리프 연습</title>
+  <body>
+    <div th:replace="~{fragments/gohome::goToHome}"></div>
+    <span th:text="${hello}"></span><hr>
+    <span th:text="${name}"></span><hr>
+    <span th:text="${age}"></span><hr>
+    <span th:text="${gender}"></span>
+  </body>
+</html>
