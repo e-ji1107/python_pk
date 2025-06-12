@@ -1,0 +1,42 @@
+/* ex12.module.css */
+.data-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    /* 제목 및 내용 가운데 정렬 */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.data-box table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    /* 테이블을 가운데 정렬 */
+    width: 80%;
+    text-align: center;
+}
+
+.data-box td,
+.data-box th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 2px #666;
+}
+
+.data-box th {
+    background-color: #f4f4f4;
+}
+
+.data-box input {
+    width: 50px;
+}
